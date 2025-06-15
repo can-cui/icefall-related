@@ -1,0 +1,3 @@
+2024-05-07 12:53:48 (prepare.sh:63:main) dl_dir: /srv/storage/talc2@talc-data2.nancy.grid5000.fr/multispeech/calcul/users/ccui/datasets/AMI
+2024-05-07 12:53:48 (prepare.sh:109:main) Stage 3: Apply GSS enhancement on MDM data (this stage requires a GPU)
+2024-05-07 12:53:48 (prepare_ami_gss.sh:57:main) Stage 4: Enhance train segments using GSS (requires GPU)

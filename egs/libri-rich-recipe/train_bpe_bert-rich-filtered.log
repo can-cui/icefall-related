@@ -1,0 +1,110 @@
+sentencepiece_trainer.cc(77) LOG(INFO) Starts training with : 
+trainer_spec {
+  input: data/lang_bpe_500/bert-rich-filtered-transcript_words.txt
+  input_format: 
+  model_prefix: data/lang_bpe_500/unigram_500_rich
+  model_type: UNIGRAM
+  vocab_size: 500
+  self_test_sample_size: 0
+  character_coverage: 1
+  input_sentence_size: 100000000
+  shuffle_input_sentence: 1
+  seed_sentencepiece_size: 1000000
+  shrinking_factor: 0.75
+  max_sentence_length: 4192
+  num_threads: 16
+  num_sub_iterations: 2
+  max_sentencepiece_length: 16
+  split_by_unicode_script: 1
+  split_by_number: 1
+  split_by_whitespace: 1
+  split_digits: 0
+  pretokenization_delimiter: 
+  treat_whitespace_as_suffix: 0
+  allow_whitespace_only_pieces: 0
+  user_defined_symbols: <blk>
+  user_defined_symbols: <sos/eos>
+  required_chars: 
+  byte_fallback: 0
+  vocabulary_output_piece_score: 1
+  train_extremely_large_corpus: 0
+  hard_vocab_limit: 1
+  use_all_vocab: 0
+  unk_id: 2
+  bos_id: -1
+  eos_id: -1
+  pad_id: -1
+  unk_piece: <unk>
+  bos_piece: <s>
+  eos_piece: </s>
+  pad_piece: <pad>
+  unk_surface:  ⁇ 
+  enable_differential_privacy: 0
+  differential_privacy_noise_level: 0
+  differential_privacy_clipping_threshold: 0
+}
+normalizer_spec {
+  name: nmt_nfkc
+  add_dummy_prefix: 1
+  remove_extra_whitespaces: 1
+  escape_whitespaces: 1
+  normalization_rule_tsv: 
+}
+denormalizer_spec {}
+trainer_interface.cc(351) LOG(INFO) SentenceIterator is not specified. Using MultiFileSentenceIterator.
+trainer_interface.cc(183) LOG(INFO) Loading corpus: data/lang_bpe_500/bert-rich-filtered-transcript_words.txt
+trainer_interface.cc(407) LOG(INFO) Loaded all 281071 sentences
+trainer_interface.cc(423) LOG(INFO) Adding meta_piece: <blk>
+trainer_interface.cc(423) LOG(INFO) Adding meta_piece: <sos/eos>
+trainer_interface.cc(423) LOG(INFO) Adding meta_piece: <unk>
+trainer_interface.cc(428) LOG(INFO) Normalizing sentences...
+trainer_interface.cc(537) LOG(INFO) all chars count=51027709
+trainer_interface.cc(558) LOG(INFO) Alphabet size=60
+trainer_interface.cc(559) LOG(INFO) Final character coverage=1
+trainer_interface.cc(591) LOG(INFO) Done! preprocessed 281071 sentences.
+unigram_model_trainer.cc(222) LOG(INFO) Making suffix array...
+unigram_model_trainer.cc(226) LOG(INFO) Extracting frequent sub strings... node_num=26300576
+unigram_model_trainer.cc(274) LOG(INFO) Initialized 279989 seed sentencepieces
+trainer_interface.cc(597) LOG(INFO) Tokenizing input sentences with whitespace: 281071
+trainer_interface.cc(608) LOG(INFO) Done! 188750
+unigram_model_trainer.cc(564) LOG(INFO) Using 188750 sentences for EM training
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=99478 obj=10.1315 num_tokens=353157 num_tokens/piece=3.5501
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=76004 obj=7.89512 num_tokens=352738 num_tokens/piece=4.64105
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=57002 obj=7.84195 num_tokens=374797 num_tokens/piece=6.57516
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=56971 obj=7.83511 num_tokens=374748 num_tokens/piece=6.57787
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=42728 obj=7.88092 num_tokens=412198 num_tokens/piece=9.64702
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=42728 obj=7.87169 num_tokens=412175 num_tokens/piece=9.64648
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=32046 obj=7.94434 num_tokens=454443 num_tokens/piece=14.181
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=32046 obj=7.93091 num_tokens=454388 num_tokens/piece=14.1792
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=24034 obj=8.03445 num_tokens=496486 num_tokens/piece=20.6577
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=24034 obj=8.01591 num_tokens=496468 num_tokens/piece=20.6569
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=18025 obj=8.15104 num_tokens=537690 num_tokens/piece=29.8302
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=18025 obj=8.12716 num_tokens=537752 num_tokens/piece=29.8337
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=13518 obj=8.29433 num_tokens=576487 num_tokens/piece=42.6459
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=13518 obj=8.26497 num_tokens=576544 num_tokens/piece=42.6501
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=10138 obj=8.46535 num_tokens=613653 num_tokens/piece=60.53
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=10138 obj=8.43079 num_tokens=613738 num_tokens/piece=60.5384
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=7603 obj=8.65875 num_tokens=649215 num_tokens/piece=85.3893
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=7603 obj=8.61855 num_tokens=649354 num_tokens/piece=85.4076
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=5702 obj=8.88579 num_tokens=684225 num_tokens/piece=119.997
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=5702 obj=8.83798 num_tokens=684300 num_tokens/piece=120.011
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=4276 obj=9.1313 num_tokens=715144 num_tokens/piece=167.246
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=4276 obj=9.07857 num_tokens=715212 num_tokens/piece=167.262
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=3207 obj=9.41732 num_tokens=748020 num_tokens/piece=233.246
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=3207 obj=9.35462 num_tokens=748014 num_tokens/piece=233.244
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=2405 obj=9.72709 num_tokens=780988 num_tokens/piece=324.735
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=2405 obj=9.65878 num_tokens=781137 num_tokens/piece=324.797
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=1803 obj=10.0568 num_tokens=816154 num_tokens/piece=452.664
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=1803 obj=9.97921 num_tokens=816218 num_tokens/piece=452.7
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=1352 obj=10.409 num_tokens=849867 num_tokens/piece=628.6
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=1352 obj=10.3232 num_tokens=849962 num_tokens/piece=628.67
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=1014 obj=10.8013 num_tokens=884030 num_tokens/piece=871.824
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=1014 obj=10.7085 num_tokens=884042 num_tokens/piece=871.836
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=760 obj=11.2494 num_tokens=926824 num_tokens/piece=1219.51
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=760 obj=11.1363 num_tokens=926918 num_tokens/piece=1219.63
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=570 obj=11.9146 num_tokens=983836 num_tokens/piece=1726.03
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=570 obj=11.7837 num_tokens=983941 num_tokens/piece=1726.21
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=0 size=550 obj=12.1882 num_tokens=1015825 num_tokens/piece=1846.95
+unigram_model_trainer.cc(580) LOG(INFO) EM sub_iter=1 size=550 obj=12.1633 num_tokens=1015962 num_tokens/piece=1847.2
+trainer_interface.cc(686) LOG(INFO) Saving model: data/lang_bpe_500/unigram_500_rich.model
+trainer_interface.cc(698) LOG(INFO) Saving vocabs: data/lang_bpe_500/unigram_500_rich.vocab

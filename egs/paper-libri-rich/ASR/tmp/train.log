@@ -1,0 +1,54 @@
+2023-09-07 22:39:07,134 INFO [train.py:965] (0/2) Training started
+2023-09-07 22:39:07,136 INFO [train.py:975] (0/2) Device: cuda:0
+2023-09-07 22:39:07,139 INFO [train.py:984] (0/2) {'frame_shift_ms': 10.0, 'allowed_excess_duration_ratio': 0.1, 'best_train_loss': inf, 'best_valid_loss': inf, 'best_train_epoch': -1, 'best_valid_epoch': -1, 'batch_idx_train': 0, 'log_interval': 50, 'reset_interval': 200, 'valid_interval': 3000, 'feature_dim': 80, 'subsampling_factor': 4, 'warm_step': 2000, 'env_info': {'k2-version': '1.24.3', 'k2-build-type': 'Release', 'k2-with-cuda': True, 'k2-git-sha1': 'e400fa3b456faf8afe0ee5bfe572946b4921a3db', 'k2-git-date': 'Sat Jul 15 04:21:50 2023', 'lhotse-version': '1.16.0', 'torch-version': '2.0.1+cu117', 'torch-cuda-available': True, 'torch-cuda-version': '11.7', 'python-version': '3.9', 'icefall-git-branch': 'master', 'icefall-git-sha1': '968ebd2-clean', 'icefall-git-date': 'Tue Jun 27 08:35:59 2023', 'icefall-path': '/srv/storage/talc2@talc-data2.nancy.grid5000.fr/multispeech/calcul/users/ccui/icefall', 'k2-path': '/srv/storage/talc2@talc-data2.nancy.grid5000.fr/multispeech/calcul/users/ccui/miniconda3/envs/dictation_dev/lib/python3.9/site-packages/k2/__init__.py', 'lhotse-path': '/srv/storage/talc2@talc-data2.nancy.grid5000.fr/multispeech/calcul/users/ccui/miniconda3/envs/dictation_dev/lib/python3.9/site-packages/lhotse/__init__.py', 'hostname': 'grele-2.nancy.grid5000.fr', 'IP address': '172.16.74.2'}, 'world_size': 2, 'master_port': 12354, 'tensorboard': True, 'num_epochs': 40, 'start_epoch': 1, 'start_batch': 0, 'exp_dir': PosixPath('tmp'), 'bpe_model': 'data/lang_bpe_500/bpe_common.model', 'base_lr': 0.05, 'lr_batches': 5000, 'lr_epochs': 3.5, 'context_size': 2, 'prune_range': 5, 'lm_scale': 0.25, 'am_scale': 0.0, 'simple_loss_scale': 0.5, 'seed': 42, 'print_diagnostics': False, 'inf_check': False, 'save_every_n': 2000, 'keep_last_k': 30, 'average_period': 200, 'use_fp16': True, 'num_encoder_layers': '2,4,3,2,4', 'feedforward_dims': '1024,1024,2048,2048,1024', 'nhead': '8,8,8,8,8', 'encoder_dims': '384,384,384,384,384', 'attention_dims': '192,192,192,192,192', 'encoder_unmasked_dims': '256,256,256,256,256', 'zipformer_downsampling_factors': '1,2,4,8,2', 'cnn_module_kernels': '31,31,31,31,31', 'decoder_dim': 512, 'joiner_dim': 512, 'full_libri': True, 'manifest_dir': PosixPath('data/fbank'), 'max_duration': 350, 'bucketing_sampler': True, 'num_buckets': 30, 'concatenate_cuts': False, 'duration_factor': 1.0, 'gap': 1.0, 'on_the_fly_feats': False, 'shuffle': True, 'drop_last': True, 'return_cuts': True, 'num_workers': 2, 'enable_spec_aug': True, 'spec_aug_time_warp_factor': 80, 'enable_musan': True, 'input_strategy': 'PrecomputedFeatures', 'blank_id': 0, 'vocab_size': 500}
+2023-09-07 22:39:07,139 INFO [train.py:986] (0/2) About to create model
+2023-09-07 22:39:07,142 INFO [train.py:965] (1/2) Training started
+2023-09-07 22:39:07,142 INFO [train.py:975] (1/2) Device: cuda:1
+2023-09-07 22:39:07,144 INFO [train.py:984] (1/2) {'frame_shift_ms': 10.0, 'allowed_excess_duration_ratio': 0.1, 'best_train_loss': inf, 'best_valid_loss': inf, 'best_train_epoch': -1, 'best_valid_epoch': -1, 'batch_idx_train': 0, 'log_interval': 50, 'reset_interval': 200, 'valid_interval': 3000, 'feature_dim': 80, 'subsampling_factor': 4, 'warm_step': 2000, 'env_info': {'k2-version': '1.24.3', 'k2-build-type': 'Release', 'k2-with-cuda': True, 'k2-git-sha1': 'e400fa3b456faf8afe0ee5bfe572946b4921a3db', 'k2-git-date': 'Sat Jul 15 04:21:50 2023', 'lhotse-version': '1.16.0', 'torch-version': '2.0.1+cu117', 'torch-cuda-available': True, 'torch-cuda-version': '11.7', 'python-version': '3.9', 'icefall-git-branch': 'master', 'icefall-git-sha1': '968ebd2-clean', 'icefall-git-date': 'Tue Jun 27 08:35:59 2023', 'icefall-path': '/srv/storage/talc2@talc-data2.nancy.grid5000.fr/multispeech/calcul/users/ccui/icefall', 'k2-path': '/srv/storage/talc2@talc-data2.nancy.grid5000.fr/multispeech/calcul/users/ccui/miniconda3/envs/dictation_dev/lib/python3.9/site-packages/k2/__init__.py', 'lhotse-path': '/srv/storage/talc2@talc-data2.nancy.grid5000.fr/multispeech/calcul/users/ccui/miniconda3/envs/dictation_dev/lib/python3.9/site-packages/lhotse/__init__.py', 'hostname': 'grele-2.nancy.grid5000.fr', 'IP address': '172.16.74.2'}, 'world_size': 2, 'master_port': 12354, 'tensorboard': True, 'num_epochs': 40, 'start_epoch': 1, 'start_batch': 0, 'exp_dir': PosixPath('tmp'), 'bpe_model': 'data/lang_bpe_500/bpe_common.model', 'base_lr': 0.05, 'lr_batches': 5000, 'lr_epochs': 3.5, 'context_size': 2, 'prune_range': 5, 'lm_scale': 0.25, 'am_scale': 0.0, 'simple_loss_scale': 0.5, 'seed': 42, 'print_diagnostics': False, 'inf_check': False, 'save_every_n': 2000, 'keep_last_k': 30, 'average_period': 200, 'use_fp16': True, 'num_encoder_layers': '2,4,3,2,4', 'feedforward_dims': '1024,1024,2048,2048,1024', 'nhead': '8,8,8,8,8', 'encoder_dims': '384,384,384,384,384', 'attention_dims': '192,192,192,192,192', 'encoder_unmasked_dims': '256,256,256,256,256', 'zipformer_downsampling_factors': '1,2,4,8,2', 'cnn_module_kernels': '31,31,31,31,31', 'decoder_dim': 512, 'joiner_dim': 512, 'full_libri': True, 'manifest_dir': PosixPath('data/fbank'), 'max_duration': 350, 'bucketing_sampler': True, 'num_buckets': 30, 'concatenate_cuts': False, 'duration_factor': 1.0, 'gap': 1.0, 'on_the_fly_feats': False, 'shuffle': True, 'drop_last': True, 'return_cuts': True, 'num_workers': 2, 'enable_spec_aug': True, 'spec_aug_time_warp_factor': 80, 'enable_musan': True, 'input_strategy': 'PrecomputedFeatures', 'blank_id': 0, 'vocab_size': 500}
+2023-09-07 22:39:07,144 INFO [train.py:986] (1/2) About to create model
+2023-09-07 22:39:07,715 INFO [zipformer.py:178] (0/2) At encoder stack 4, which has downsampling_factor=2, we will combine the outputs of layers 1 and 3, with downsampling_factors=2 and 8.
+2023-09-07 22:39:07,727 INFO [zipformer.py:178] (1/2) At encoder stack 4, which has downsampling_factor=2, we will combine the outputs of layers 1 and 3, with downsampling_factors=2 and 8.
+2023-09-07 22:39:07,729 INFO [train.py:990] (0/2) Number of model parameters: 70369391
+2023-09-07 22:39:07,741 INFO [train.py:990] (1/2) Number of model parameters: 70369391
+2023-09-07 22:39:09,940 INFO [train.py:1005] (1/2) Using DDP
+2023-09-07 22:39:10,288 INFO [train.py:1005] (0/2) Using DDP
+2023-09-07 22:39:10,447 INFO [asr_datamodule.py:409] (1/2) About to get train-clean-100 cuts
+2023-09-07 22:39:10,447 INFO [asr_datamodule.py:409] (0/2) About to get train-clean-100 cuts
+2023-09-07 22:39:10,449 INFO [asr_datamodule.py:416] (0/2) About to get train-clean-360 cuts
+2023-09-07 22:39:10,450 INFO [asr_datamodule.py:416] (1/2) About to get train-clean-360 cuts
+2023-09-07 22:39:10,451 INFO [asr_datamodule.py:423] (0/2) About to get train-other-500 cuts
+2023-09-07 22:39:10,451 INFO [asr_datamodule.py:423] (1/2) About to get train-other-500 cuts
+2023-09-07 22:39:10,452 INFO [asr_datamodule.py:225] (0/2) Enable MUSAN
+2023-09-07 22:39:10,452 INFO [asr_datamodule.py:225] (1/2) Enable MUSAN
+2023-09-07 22:39:10,452 INFO [asr_datamodule.py:226] (0/2) About to get Musan cuts
+2023-09-07 22:39:10,452 INFO [asr_datamodule.py:226] (1/2) About to get Musan cuts
+2023-09-07 22:39:12,622 INFO [asr_datamodule.py:254] (0/2) Enable SpecAugment
+2023-09-07 22:39:12,622 INFO [asr_datamodule.py:255] (0/2) Time warp factor: 80
+2023-09-07 22:39:12,622 INFO [asr_datamodule.py:267] (0/2) Num frame mask: 10
+2023-09-07 22:39:12,622 INFO [asr_datamodule.py:280] (0/2) About to create train dataset
+2023-09-07 22:39:12,622 INFO [asr_datamodule.py:309] (0/2) Using DynamicBucketingSampler.
+2023-09-07 22:39:12,716 INFO [asr_datamodule.py:254] (1/2) Enable SpecAugment
+2023-09-07 22:39:12,716 INFO [asr_datamodule.py:255] (1/2) Time warp factor: 80
+2023-09-07 22:39:12,717 INFO [asr_datamodule.py:267] (1/2) Num frame mask: 10
+2023-09-07 22:39:12,717 INFO [asr_datamodule.py:280] (1/2) About to create train dataset
+2023-09-07 22:39:12,717 INFO [asr_datamodule.py:309] (1/2) Using DynamicBucketingSampler.
+2023-09-07 22:39:17,462 INFO [asr_datamodule.py:324] (1/2) About to create train dataloader
+2023-09-07 22:39:17,462 INFO [asr_datamodule.py:430] (1/2) About to get dev-clean cuts
+2023-09-07 22:39:17,496 INFO [asr_datamodule.py:437] (1/2) About to get dev-other cuts
+2023-09-07 22:39:17,533 INFO [asr_datamodule.py:355] (1/2) About to create dev dataset
+2023-09-07 22:39:17,774 INFO [asr_datamodule.py:324] (0/2) About to create train dataloader
+2023-09-07 22:39:17,775 INFO [asr_datamodule.py:430] (0/2) About to get dev-clean cuts
+2023-09-07 22:39:17,776 INFO [asr_datamodule.py:437] (0/2) About to get dev-other cuts
+2023-09-07 22:39:17,777 INFO [asr_datamodule.py:355] (0/2) About to create dev dataset
+2023-09-07 22:39:17,784 INFO [asr_datamodule.py:374] (1/2) About to create dev dataloader
+2023-09-07 22:39:18,028 INFO [asr_datamodule.py:374] (0/2) About to create dev dataloader
+2023-09-07 22:39:35,003 INFO [train.py:893] (1/2) Epoch 1, batch 0, loss[loss=7.57, simple_loss=6.852, pruned_loss=7.164, over 8680.00 frames. ], tot_loss[loss=7.57, simple_loss=6.852, pruned_loss=7.164, over 8680.00 frames. ], batch size: 25, lr: 2.50e-02, grad_scale: 2.0
+2023-09-07 22:39:35,004 INFO [train.py:918] (1/2) Computing validation loss
+2023-09-07 22:39:35,004 INFO [train.py:893] (0/2) Epoch 1, batch 0, loss[loss=7.373, simple_loss=6.673, pruned_loss=6.981, over 8562.00 frames. ], tot_loss[loss=7.373, simple_loss=6.673, pruned_loss=6.981, over 8562.00 frames. ], batch size: 20, lr: 2.50e-02, grad_scale: 2.0
+2023-09-07 22:39:35,005 INFO [train.py:918] (0/2) Computing validation loss
+2023-09-07 22:40:05,548 INFO [train.py:927] (1/2) Epoch 1, validation: loss=6.915, simple_loss=6.239, pruned_loss=6.739, over 944034.00 frames. 
+2023-09-07 22:40:05,549 INFO [train.py:928] (1/2) Maximum memory allocated so far is 6225MB
+2023-09-07 22:40:05,549 INFO [train.py:927] (0/2) Epoch 1, validation: loss=6.915, simple_loss=6.239, pruned_loss=6.739, over 944034.00 frames. 
+2023-09-07 22:40:05,549 INFO [train.py:928] (0/2) Maximum memory allocated so far is 6248MB
+2023-09-07 22:40:11,081 INFO [zipformer.py:625] (0/2) warmup_begin=3333.3, warmup_end=4000.0, batch_count=5.0, num_to_drop=2, layers_to_drop={0, 1}
+2023-09-07 22:40:11,085 INFO [zipformer.py:625] (1/2) warmup_begin=3333.3, warmup_end=4000.0, batch_count=5.0, num_to_drop=2, layers_to_drop={1, 3}
