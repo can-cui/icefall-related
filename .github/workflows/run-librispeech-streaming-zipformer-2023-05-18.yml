@@ -24,14 +24,14 @@ on:
   pull_request:
     types: [labeled]
 
-  schedule:
-    # minute (0-59)
-    # hour (0-23)
-    # day of the month (1-31)
-    # month (1-12)
-    # day of the week (0-6)
-    # nightly build at 15:50 UTC time every day
-    - cron: "50 15 * * *"
+  # schedule:
+  #   # minute (0-59)
+  #   # hour (0-23)
+  #   # day of the month (1-31)
+  #   # month (1-12)
+  #   # day of the week (0-6)
+  #   # nightly build at 15:50 UTC time every day
+  #   - cron: "50 15 * * *"
 
 concurrency:
   group: run_librispeech_2023_05_18_streaming_zipformer-${{ github.ref }}
